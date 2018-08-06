@@ -53,7 +53,22 @@ First input need to be copied because set-difference returns the parts or full o
 
 
 
+6.26>
+   a)  
+	(defun right-side (l)
+	    (rest (member '-vs- l)))
+   
+   b)
+	 (defun left-side (l)
+	   (reverse (rest (member '-vs- (reverse l)))))
 
 
+   c)
+	 (defun count-common (l)
+	   (length (intersection (left-side l) (right-side l))))
+
+   d)
+	(defun compare (l)
+	   (append (list (count-common l)) '(common features)))	
 
 
