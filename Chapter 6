@@ -76,10 +76,19 @@ First input need to be copied because set-difference returns the parts or full o
 ----------------------List as Tables------------------------
 Just for fun
 Implementing ASSOC function
- (defun my-assoc (word lst)
+
+	 (defun my-assoc (word lst)
 	    (cond ((equal (length lst) 0) 'nil)
 		  ((equal (car (car lst)) word) (first lst))
 		  (t (my-assoc word (rest lst)))))
+
+By using and
+
+	 (defun my-assoc (word lst)
+	    (and lst 
+		 (cond ((equal (car (car lst)) word) (first lst))
+		       (t (my-assoc word (rest lst))))))
+
 
 ------------------------------------------------------------
 
