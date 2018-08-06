@@ -72,3 +72,15 @@ First input need to be copied because set-difference returns the parts or full o
 	   (list (count-common l) 'common 'features))	
 
 
+
+----------------------List as Tables------------------------
+Just for fun
+Implementing ASSOC function
+ (defun my-assoc (word lst)
+	    (cond ((equal (length lst) 0) 'nil)
+		  ((equal (car (car lst)) word) (first lst))
+		  (t (my-assoc word (rest lst)))))
+
+------------------------------------------------------------
+
+
