@@ -69,6 +69,6 @@ First input need to be copied because set-difference returns the parts or full o
 
    d)
 	(defun compare (l)
-	   (append (list (count-common l)) '(common features)))	
+	   (list (count-common l) 'common 'features))	
 
 
