@@ -79,7 +79,7 @@ Implementing ASSOC function (With my limited knowledge)
 
 	 (defun my-assoc (word list)
 	    (and list 
-		 (cond ((equal (car (car list)) word) (first list))
+		 (and lst (cond ((equal (caar lst) word) (first lst))
 		       (t (my-assoc word (rest list))))))
 
 
