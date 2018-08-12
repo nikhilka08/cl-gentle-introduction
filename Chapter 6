@@ -85,4 +85,38 @@ Implementing ASSOC function (With my limited knowledge)
 
 ------------------------------------------------------------
 
+6.30> 
+	(setf bookslist '((war-and-peace leo-tolstoy)
+			  (Meditations Marcus-Aurelius)
+			  (god-delusion richard-dawkins)
+			  (great-gatsby scott-fitzerald)
+			  (the-republic plato)
+			  )
+	       )
+
+6.31>
+	(defun who-wrote (book)
+	   (second (assoc book bookslist)))
+
+6.33>
+Cannot create it by using ASSOC . The structure of table need to be a list of dotted pair.
+
+6.35>
+
+b)
+	(defun nerdus (state)
+	   (second (assoc 'state nerd-state)))
+
+d)
+	 (defun sleepless-nerd (state)
+	   (let ((next-state (nerdus state)))
+		 (if (equal next-state 'sleeping)
+		     (nerdus next-state)
+		     y)))
+
+e)
+	 (defun nerd-on-caffine (state)
+	   (nerdus (nerdus state)))
+
+
 
