@@ -118,5 +118,44 @@ e)
 	 (defun nerd-on-caffine (state)
 	   (nerdus (nerdus state)))
 
+6.36>
+	 (defun remove-first-and-reverse (list)
+	   (reverse (rest list)))
+	
+	 (defun swap-list (list)
+	   (let ((first-elem (first list))
+		 (last-elem (first(last list)))
+		  (list-without (remove-first-and-reverse (remove-first-and-reverse list))))
+	     (append (list last-elem) list-without (list first-elem))))
+
+
+
+6.37>
+
+	 (defun rotate-left (list)
+	     (append (rest list) (list (first list))))
+
+
+	 (defun remove-last (list)
+	   (reverse (rest (reverse list))))
+
+	(defun rotate-right (list)
+	   (let ((last-elem (first (last list))))
+		 (cons last-elem (remove-last list))))
+
+
+6.38> set x and y has to be "same" to yield same result from (set-difference x y) and (set-difference y x)
+	
+
+6.39> Append
+	
+6.40>
+
+	(defvar table-assoc '((a b c d e)
+			       (b c d e)
+			       (c d e)
+			       (d e)
+			       (e)))
+
 
 
